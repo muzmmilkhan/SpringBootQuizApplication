@@ -90,7 +90,7 @@ pipeline {
                   artifacts: [
                     [artifactId: 'vproapp',
                      classifier: '',
-                     file: 'target/SpringBootQuizApp-0.0.1-SNAPSHOT.jar',
+                     file: 'target/demo-0.0.1-SNAPSHOT.jarr',
                      type: 'jar']
                   ]
                 )

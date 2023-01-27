@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+    <th:block th:insert="fragments/imports :: head"></th:block>
+</head>
+<body>
+<th:block th:insert="fragments/components :: navBar"></th:block>
+<div class="wall">
+    <div class="window-form">
+        <form class="custom-form" th:action="@{/quiz/results/}" method="post">
+            <div class="question-list">
+                <th:block th:each="question,iterStat : ${questions}">
+                    <div class="question">
+                        <tr th:st>
+                            <td th:text="${iterStat.count}"></td>
+                            <td th:text="${question.content}"></td>
+                            <br/>
+                        </tr>
+                    </div>
+                    <div class="answer">
+                    <input type="radio"
+                           th:name="${question.id}"
+                           th:value="${question.answer1}"/>
+                    <p class="que" th:text="${question.answer1}"></p>
+                    <br/>
+                    </div>
+                    <div class="answer">
+                    <input type="radio"
+                           th:name="${question.id}"
+                           th:value="${question.answer2}"/>
+                    <p class="que" th:text="${question.answer2}"></p>
+                    <br/>
+                    </div>
+                    <div class="answer">
+                    <input id="defaultChecked" type="radio"
+                           th:name="${question.id}"
+                           th:value="${question.answer3}"/>
+                    <p class="que" th:text="${question.answer3}"></p>
+                    <br/>
+                    </div>
+                </th:block>
+            </div>
+            <button type="submit" class="btn-primary" value="Submit">Submit</button>
+        </form>
+        <br/>
+    </div>
+</div>
+<th:block th:insert="fragments/components :: footer"></th:block>
+</body>
+</html>
+
