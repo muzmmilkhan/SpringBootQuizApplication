@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+    <th:block th:insert="fragments/imports :: head"></th:block>
+</head>
+
+<body>
+<th:block th:insert="fragments/components :: navBar"></th:block>
+<th:block th:insert="fragments/components :: soon"></th:block>
+<!--
+<form th:action="@{/quiz/newquiz}" method="post" th:object="${newQuiz}">
+    <label>Title</label>
+    <input th:type="text" th:field="*{title}" />
+    <br />
+    <br />
+    <label>Description</label>
+    <input th:type="text" th:field="*{description}" />
+    <br />
+    <br />
+    <button th:type="submit"><a href ="questionOne.html" class="startlink">Next</a></button>
+</form>
+-->
+<th:block th:insert="fragments/components :: footer"></th:block>
+
+</body>
+
+</html>

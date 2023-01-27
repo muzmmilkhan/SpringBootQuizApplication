@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="fragments/imports :: head"></th:block>
+</head>
+<body>
+<th:block th:insert="fragments/components :: navBar"></th:block>
+<div class="wall">
+    <div class="start">
+        <a th:href="@{/main}" class="startlink">Click to start</a>
+    </div>
+</div>
+</div>
+<th:block th:insert="fragments/components :: footer"></th:block>
+</body>
+
+</html>
+
